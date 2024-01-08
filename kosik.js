@@ -1,12 +1,12 @@
 fetch("produkty.json").then(
-    function(response){
+    function (response) {
         return response.json();
     }
 ).then(
-    function(data){
+    function (data) {
         localStorage.setItem("produkty", JSON.stringify(data));
         if (!localStorage.getItem("cart")) {
-            localStorage.setItem("cart","[]");
+            localStorage.setItem("cart", "[]");
         }
     }
 );
@@ -16,7 +16,7 @@ let produkty = JSON.parse(localStorage.getItem("produkty"));
 let cart = JSON.parse(localStorage.getItem("cart"));
 console.log(produkty);
 function pridatDoKosiku(kod) {
-    let produkt = produkty.produkty.find(function(produkt){
+    let produkt = produkty.produkty.find(function (produkt) {
         return produkt.kod == kod;
     });
     cart.push(produkt);
@@ -29,7 +29,7 @@ let tlacitko = document.getElementById("vymazat");
 let kontejner = document.getElementById('kontejner');
 
 
-cart.forEach(function(produkt, index) {
+cart.forEach(function (produkt, index) {
     let article = document.createElement('article');
     article.className = 'sell';
 
@@ -52,14 +52,14 @@ cart.forEach(function(produkt, index) {
     div.appendChild(a);
 
     article.appendChild(div);
-    kontejner.appendChild(article); 
+    kontejner.appendChild(article);
 
-    
+
 });
 
 let vymazatButton = document.getElementById('vymazat');
 
-vymazatButton.addEventListener('click', function() {
+vymazatButton.addEventListener('click', function () {
     localStorage.removeItem('cart');
     location.reload();
 });

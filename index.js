@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let button = document.createElement("button");
         let nakup = document.createElement("button");
         button.innerText = "Koupit";
-        button.id = "nakup"; 
+        button.id = "nakup";
         localStorage.setItem("produkt" + i, objekty[i].Produkt);
         nakup.innerText = "Koupit";
-        nakup.id = "nakup"; 
+        nakup.id = "nakup";
         nakup.addEventListener("click", function () {
             alert("Koupeno");
-            localStorage.getItem("produkt" + i); 
-            console.log(localStorage.getItem("produkt" + i)); 
+            localStorage.getItem("produkt" + i);
+            console.log(localStorage.getItem("produkt" + i));
         });
         id.innerHTML += objekty[i].id;
         auto.innerHTML += objekty[i].auto;
@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
         kontejner.append(cena);
         kontejner.append(rokvyroby);
         kontejner.append(nakup);
-      
 
-        filtrButton.addEventListener("click", function () {   
+
+        filtrButton.addEventListener("click", function () {
             let minimalniCena = minCena.value;
             let maximalniCena = maxCena.value;
             if (objekty[i].cena >= minimalniCena && objekty[i].cena <= maximalniCena) {
-              
+
             } else {
                 kontejner.style.display = "none";
             }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.produkt = objekty[i].Produkt;
         }
 
-    } 
+    }
 
 
 }); 

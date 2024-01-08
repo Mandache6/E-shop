@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+
 img {
     border-radius: 40%;
     padding-left: 0.1%;
@@ -16,6 +17,7 @@ nav {
     height: 10vh;
     border-bottom: solid khaki 5px;
 }
+
 a {
     display: flex;
     text-decoration: none;
@@ -44,6 +46,7 @@ ul li a {
     text-decoration: none;
     padding-top: 17%;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -59,8 +62,9 @@ li {
     padding-top: 2.5vh;
     padding-right: 1.5%;
     list-style-type: none;
- 
+
 }
+
 li a {
     display: block;
     color: white;
