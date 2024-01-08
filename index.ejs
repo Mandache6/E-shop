@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.ejs" class="menu-2">DOMŮ</a> </li>¨
+                <li><a href="kosik.html" class="menu-2">KOŠÍK</a> </li>
+            </ul>
+        </nav>
+        <section class="centered-box">
+            <article class="regulace">
+                <form>
+                    <label for="minCena">Minimální cena:</label>
+                    <input type="number" id="minCena" name="minCena">
+
+                    <label for="maxCena">Maximální cena:</label>
+                    <input type="number" id="maxCena" name="maxCena">
+
+                    <button type="button" id="filtr">Filtrovat</button>
+                    <button type="button" id="razeniCenaVzestupne">Cena vzestupně</button>
+                    <button type="button" id="razeniCenaSestupne">Cena sestupně</button>
+                </form>
+            </article>
+        </section>
+        <section id="hlavni">
+
+        </section>
+        <section class="strankovani">
+            <a href="#">&laquo;</a>
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </section>
+    </header>
+</body>
+
+</html>
