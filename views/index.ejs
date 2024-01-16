@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <title><%=titulek%></title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <script src="index.js"></script> -->
 </head>
 
 <body>
@@ -33,17 +33,17 @@
             </article>
         </section>
         <section id="hlavni">
-
-        </section>
-        <section class="strankovani">
-            <a href="#">&laquo;</a>
-            <a class="active" href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
+            <% for (const produkt of produkty) { %>
+            <article class="produkty">
+                        <p class="nazev">
+                            <%= produkt.nazev %></a>
+                        </p>
+                        <p class="cena">
+                            <%= produkt.cena %> €
+                        </p>
+                        <button class="button"></button>
+            </article>
+            <% } %>
         </section>
     </header>
 </body>

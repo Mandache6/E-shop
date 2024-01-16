@@ -1,20 +1,22 @@
 const express = require('express')
 const app = express()
+const mysql = require("mysql")
 
+let connectionString = "mysql://root@localhost/databazeShop"
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + "/views"))
+app.use(express.static("root"))
 
 
 app.get("/", (req, res) => {
-    console.log("Hello World")
-    res.render("index")
-    connection.query(sql, (err, resultData) => {
+
+    const dotaz = "SELECT * from produkty"
+    const connection = mysql.createConnection(connectionString)
+    connection.query(dotaz, (err, resultData) => {
         if (err) {
             res.status(500).send(err.message)
             return
         }
-        console.log(resultData)
-        for (const produkt of produkty)
             res.render('index', {
                 titulek: "První",
                 nadpis: "Ahoj",
@@ -22,8 +24,8 @@ app.get("/", (req, res) => {
             })
     })
 });
-const userRouter = require("./routes/users")
-app.use("/users", userRouter)
+// const userRouter = require("./routes/users")
+// app.use("/users", userRouter)
 
 
-app.listen(1500); 
+app.listen(81); 
